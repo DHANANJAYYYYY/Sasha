@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Gift for You</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <button id="reveal-btn">Click Me</button>
+
+        <div id="poster-container" class="hidden">
+            <img src="your-poster-image.png" alt="Gift Poster" class="poster">
+        </div>
+    </div>
+
+    <script>
+        const btn = document.getElementById('reveal-btn');
+        const poster = document.getElementById('poster-container');
+
+        btn.addEventListener('click', () => {
+            btn.classList.add('fade-out');
+            setTimeout(() => {
+                btn.style.display = 'none';
+                poster.classList.remove('hidden');
+                poster.classList.add('fade-in');
+            }, 500); // Matches the transition time
+        });
+    </script>
+</body>
+</html>
