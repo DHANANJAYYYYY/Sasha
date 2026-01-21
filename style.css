@@ -1,0 +1,57 @@
+/* style.css */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+}
+
+#reveal-btn {
+    background: transparent;
+    color: #fff; /* White text */
+    border: 1px solid #fff;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+}
+
+#reveal-btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.poster {
+    max-width: 90vw;
+    max-height: 80vh;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+    border: 2px solid #fff;
+}
+
+/* Animations */
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.fade-in {
+    display: block !important;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
